@@ -1,4 +1,4 @@
-const apiKey = "77d61f20";  // Replace with your actual API key
+const apiKey = ""  // Replace with your actual API key
 
 
 
