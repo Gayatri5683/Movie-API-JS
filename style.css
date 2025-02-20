@@ -75,10 +75,10 @@ h1 {
     margin-bottom: 20px;
 } */
 
-.light-mode {
-    background-color: white;
+/* .light-mode {
+    
     color: black;
-}
+} */
 
 .dark-mode {
     background-color: black;
@@ -90,23 +90,44 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #f8f8f8;
+    background-color: black;
+}
+
+.nav-item {
+    color: white; /* Light mode text color for navbar items */
+    text-decoration: none;
+    font-weight: bold; /* Optional: makes the text bold */
+}
+body .light-mode {
+    color: white;
+}
+
+body.dark-mode {
+    background-color: #181818; /* Dark mode background */
+    color: #f0f0f0; /* Dark mode text color */
+}
+
+.navbar.dark-mode {
+    background-color: #222; /* Dark mode navbar background */
+    color: white; /* Dark mode text color */
+}
+
+.nav-item.dark-mode {
+    color: #f0f0f0; /* Dark mode text for navbar items */
 }
 
 .dark-mode .navbar {
     background-color: #333;
 }
 
-.nav-links .nav-item {
-    color: black;
+/* .nav-links .nav-item {
+    color: white;
     text-decoration: none;
     /* margin: 0 10px; */
-}
-
+/* }
+ */ 
 .dark-mode .nav-links .nav-item {
-    /* color: white; */
-
-    color: red;
+   color: black;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
     transition: color 0.3s ease-in-out;
 }
@@ -331,3 +352,16 @@ h1 {
     
 }
 
+.movie-details button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.movie-details button:hover {
+    background-color: darkred;
+}

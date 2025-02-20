@@ -1,4 +1,4 @@
-const apiKey = "" // Replace with your actual API key
+const apiKey = "77d61f20";  // Replace with your actual API key
 
 
 
@@ -79,6 +79,7 @@ function showMovieDetails(movie) {
                     <p><strong>Director:</strong> ${movie.Director}</p>
                     <p><strong>Actors:</strong> ${movie.Actors}</p>
                     <p><strong>Plot:</strong> ${movie.Plot}</p>
+                    <button onclick="watchTrailer('${movie.Title}')">Watch Trailer</button>
                 </div>
                 
     `;
@@ -103,7 +104,7 @@ function showMovieDetails(movie) {
                 themeIcon.src = "icons8-dark-mode-50.png";
                 themeIcon.alt = "Dark Mode";
                 navItems.forEach(item => {
-                    item.style.color = "red";
+                    item.style.color = "white";
                     item.style.textShadow = "0 0 10px rgba(255, 0, 0, 0.8)";
                 });
             } else {
@@ -116,7 +117,7 @@ function showMovieDetails(movie) {
             }
             
             navItems.forEach(item => {
-                item.style.color = body.classList.contains("dark-mode") ? "white" : "black";
+                item.style.color = body.classList.contains("dark-mode") ? "black" : "white";
             });
         });
 
@@ -129,4 +130,9 @@ function handleKeyPress(event) {
     if (event.key === "Enter") {
         searchMovies();
     }
+}
+
+function watchTrailer(movieTitle) {
+    const trailerUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(movieTitle)}+trailer`;
+    window.open(trailerUrl, '_blank');
 }
